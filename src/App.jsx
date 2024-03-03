@@ -1,7 +1,8 @@
 import './styles/index.css'
-import { Experience } from './components/pexperience.jsx'
-import Education from './components/education.jsx'
-import { Info } from './components/ginfo.jsx'
+import Info from './components/pexperience'
+import Education from './components/education'
+import Experience from './components/pexperience'
+
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Education />
         <Experience />
       </div>
+      <div className='display'></div>
     </div>
   )
 }
