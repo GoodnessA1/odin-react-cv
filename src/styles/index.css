@@ -14,5 +14,6 @@
 }
 
 .container {
-  background-color: #E6E7E8
+  display: flex;
+  flex-direction: column;
 }
