@@ -1,7 +1,7 @@
 import '../styles/style.css'
 import { useState } from 'react'
 
-function Info() {
+function Info({ onFormSubmit }) {
     const [generalInfo, setGeneralInfo] = useState({
         name: "",
         contactInfo: "",
@@ -18,7 +18,13 @@ function Info() {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert(`${generalInfo.name} + ${generalInfo.contactInfo} + ${generalInfo.emailAddress} + ${generalInfo.houseAddress}`)
+        onFormSubmit(generalInfo)
+        setGeneralInfo({
+            name: "",
+            contactInfo: "",
+            emailAddress: "",
+            houseAddress: ""
+        })
     }
     return (
         <div className='experience'>

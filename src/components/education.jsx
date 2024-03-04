@@ -1,7 +1,7 @@
 import '../styles/style.css'
 import { useState } from 'react';
 
-function Education() {
+function Education({ onFormSubmit }) {
     const [education, setEducation] = useState({
         tertiaryEducation: "",
         dateAttended: "",
@@ -18,7 +18,13 @@ function Education() {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert(`${education.educationLevel} + ${education.dateAttended} + ${education.tertiaryEducation} + ${education.course}`)
+        onFormSubmit(education)
+        setEducation({
+            tertiaryEducation: "",
+            dateAttended: "",
+            course: "",
+            educationLevel: ""
+        })
     }
     return (
         <div className='experience'>

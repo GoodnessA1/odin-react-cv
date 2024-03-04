@@ -1,7 +1,7 @@
 import '../styles/style.css'
 import { useState } from 'react'
 
-function Experience() {
+function Experience({ onFormSubmit }) {
     const [experience, setExperience] = useState({practicalExperience: ""});
 
     const handleInputChange = (e) => {
@@ -13,7 +13,10 @@ function Experience() {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        alert(experience.practicalExperience)
+        onFormSubmit(experience)
+        setExperience({
+            practicalExperience: ""
+        })
     }
     return (
         <div className='experience'>
