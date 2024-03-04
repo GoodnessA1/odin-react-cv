@@ -1,5 +1,5 @@
 import './styles/index.css'
-import Info from './components/pexperience'
+import Info from './components/ginfo'
 import Education from './components/education'
 import Experience from './components/pexperience'
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className='container'>
       <div className='inpt'>
-        <Info />
+        <Info  />
         <Education />
         <Experience />
       </div>
