@@ -9,7 +9,7 @@ function App() {
   const [submittedInfoValue, setSubmittedInfoValue] = useState(null)
   const handleInfoFormSubmit = (value) => {
     setSubmittedInfoValue(value);
-    alert(submittedInfoValue)
+    alert(submittedInfoValue.head)
   };
   const [submittedEducationValue, setSubmittedEducationValue] = useState(null)
   const handleEducationFormSubmit = (value) => {
