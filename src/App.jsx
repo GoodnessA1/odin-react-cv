@@ -18,7 +18,7 @@ function App() {
   };
   const [submittedExperienceValue, setSubmittedExperienceValue] = useState(null)
   const handleExperienceFormSubmit = (value) => {
-    setExperienceSubmittedValue(value);
+    setSubmittedExperienceValue(value);
     alert(submittedExperienceValue)
   };
 
