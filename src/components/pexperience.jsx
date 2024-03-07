@@ -24,7 +24,7 @@ function Experience({ onFormSubmit }) {
             <form onSubmit={handleSubmit}>
                 <label>
                     PRACTICAL EXPERIENCE:<br />
-                    <textarea className='text' onChange={handleInputChange} name='practicalExperience' value={experience.practicalExperience}></textarea><br />
+                    <textarea className='text' onChange={handleInputChange} name='practicalExperience' value={experience.practicalExperience} required></textarea><br />
                 </label>
                 <input type='submit'/>
             </form>

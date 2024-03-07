@@ -21,7 +21,23 @@
   width: 600px;
 }
 .display {
-  height: 100vh;
+  height: 1200px;
   background-color: white;
   width: 600px;
+}
+
+.display h2 {
+  color: black;
+  font-size: 46px;
+  font-style: italic;
+}
+
+.display h3 {
+  color: black;
+  font-size: 38px;
+}
+
+.display p {
+  color: black;
+  font-size: 20px;
 }

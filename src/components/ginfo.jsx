@@ -27,27 +27,29 @@ function Info({ onFormSubmit }) {
         })
     }
     return (
-        <div className='experience'>
+        <div>
             <h1>GENERAL INFORMATION</h1>
-            <form onSubmit={handleSubmit}>
-                <label>
-                    NAME:<br />
-                    <input onChange={handleInputChange} name='name' value={generalInfo.name} />
-                </label><br />
-                <label>
-                    PHONE NUMBER:<br />
-                    <input onChange={handleInputChange} name='contactInfo' value={generalInfo.contactInfo} />
-                </label><br />
-                <label>
-                    EMAIL ADDRESS:<br />
-                    <input onChange={handleInputChange} name='emailAddress' value={generalInfo.emailAddress} />
-                </label><br />
-                <label>
-                    HOUSE ADDRESS:<br />
-                    <input onChange={handleInputChange} name='houseAddress' value={generalInfo.houseAddress} />
-                </label><br />
-                <input type='submit'/>
-            </form>
+            <div  className='experience'>
+                <form onSubmit={handleSubmit} id='form'>
+                    <label>
+                        NAME:<br />
+                        <input onChange={handleInputChange} name='name' value={generalInfo.name} required/>
+                    </label><br />
+                    <label>
+                        PHONE NUMBER:<br />
+                        <input onChange={handleInputChange} name='contactInfo' value={generalInfo.contactInfo} required/>
+                    </label><br />
+                    <label>
+                        EMAIL ADDRESS:<br />
+                        <input onChange={handleInputChange} name='emailAddress' value={generalInfo.emailAddress} required/>
+                    </label><br />
+                    <label>
+                        HOUSE ADDRESS:<br />
+                        <input onChange={handleInputChange} name='houseAddress' value={generalInfo.houseAddress} required/>
+                    </label><br />
+                    <input type='submit'/>
+                </form>
+            </div>
         </div>
     )
 }

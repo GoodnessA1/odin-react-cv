@@ -6,20 +6,28 @@ import { useState } from 'react'
 
 
 function App() {
-  const [submittedInfoValue, setSubmittedInfoValue] = useState(null)
+  const [submittedInfoValue, setSubmittedInfoValue] = useState({
+  name: "",
+  contactInfo: "",
+  emailAddress: "",
+  houseAddress: ""})
   const handleInfoFormSubmit = (value) => {
     setSubmittedInfoValue(value);
-    alert(submittedInfoValue.head)
   };
-  const [submittedEducationValue, setSubmittedEducationValue] = useState(null)
+  const [submittedEducationValue, setSubmittedEducationValue] = useState({
+    tertiaryEducation: "",
+    dateAttended: "",
+    course: "",
+    educationLevel: ""
+  })
   const handleEducationFormSubmit = (value) => {
     setSubmittedEducationValue(value);
-    alert(submittedEducationValue)
   };
-  const [submittedExperienceValue, setSubmittedExperienceValue] = useState(null)
+  const [submittedExperienceValue, setSubmittedExperienceValue] = useState({
+    practicalExperience: ""
+  })
   const handleExperienceFormSubmit = (value) => {
     setSubmittedExperienceValue(value);
-    alert(submittedExperienceValue)
   };
 
   return (
@@ -30,7 +38,7 @@ function App() {
         <Experience onFormSubmit={handleExperienceFormSubmit}/>
       </div>
       <div className='display'>
-      <h2>GENERAL INFORMATION</h2>
+        <h2>GENERAL INFORMATION</h2>
         <h3>Name: {submittedInfoValue.name}</h3>
         <p>Contact: {submittedInfoValue.contactInfo}</p>
         <p>Email Address: {submittedInfoValue.emailAddress}</p>

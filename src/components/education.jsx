@@ -32,19 +32,19 @@ function Education({ onFormSubmit }) {
             <form onSubmit={handleSubmit}>
                 <label>
                     EDUCATION LEVEL:<br />
-                    <input onChange={handleInputChange} name='educationLevel' value={education.educationLevel} />
+                    <input onChange={handleInputChange} name='educationLevel' value={education.educationLevel} required/>
                 </label><br />
                 <label>
                     TERTIARY INSTITUTION:<br />
-                    <input onChange={handleInputChange} name='tertiaryEducation' value={education.tertiaryEducation} />
+                    <input onChange={handleInputChange} name='tertiaryEducation' value={education.tertiaryEducation} required/>
                 </label><br />
                 <label>
                     DATE ATTENDED:<br />
-                    <input onChange={handleInputChange} name='dateAttended' value={education.dateAttended} />
+                    <input onChange={handleInputChange} name='dateAttended' value={education.dateAttended} required/>
                 </label><br />
                 <label>
                     COURSE:<br />
-                    <input onChange={handleInputChange} name='course' value={education.course} />
+                    <input onChange={handleInputChange} name='course' value={education.course} required/>
                 </label><br />
                 <input type='submit'/>
             </form>
